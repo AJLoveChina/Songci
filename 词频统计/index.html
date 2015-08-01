@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>宋词生产机</title>
+	<script type='text/javascript' src='txt.js'></script>
+	<style>
+		.result{display:inline-block;width:300px;height:1000px;overflow-y:auto;word-wrap:break-word;border:1px solid #ccc;}
+		ol li{font-size:12px;}
+		#lyric{
+			position:fixed;top:50%;left:50%;
+			width:400px;height:350px;
+			margin-left:-200px;margin-top:-200px;
+			background:rgba(0,0,0,0.4);
+			color:white;border-radius:10px;
+			display:none;font-size:20px;
+			padding-top:50px;
+		}
+	</style>
+</head>
+<body>
+<ol>
+	<li>txt.js文件是语料库，我对语料库预处理化，去掉了引号等特殊符号然后放在变量c中，</li>
+	<li>读者也可以放在textarea中，然后读取其中的内容，这样更方便。</li>
+	<li>jquery.js只是用来做个简单的样式，并无他用</li>
+</ol>
+<button onclick='yy.main(1)'>统计1个字的频率</button>
+<button onclick='yy.main(2)'>统计2个字的频率</button>
+<button onclick='yy.create()'>写一首词</button><br>
+<div id='lyric'></div>
+<span id='result' class='result'></span>
+<span id='result2' class='result'></span>
+<script type='text/javascript' src='jquery.js'></script>
+<script type='text/javascript' src='index.js'></script>
+</body>
+</html>
